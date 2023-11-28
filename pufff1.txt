@@ -1,0 +1,21 @@
+1) Obtener todos los datos de la tabla Detalles Factura.
+
+SELECT *
+FROM Detalle_factura
+WHERE Detalle_factura.cod_articulo =    Articulos.codigo
+
+2) Obtener aquellos articulos que se hayan vendido menos de 10 veces.
+
+SELECT *
+FROM Detalle_factura
+WHERE cantidad < 10 
+
+3) Contar cuantas ventas hubo.
+
+SELECT COUNT(*)
+FROM Detalle_factura
+
+4) Sumar la cantidad de articulos que se vendieron.
+
+SELECT SUM(cantidad)
+FROM Detalle_factura
