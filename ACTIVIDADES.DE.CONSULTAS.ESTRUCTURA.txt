@@ -1,0 +1,75 @@
+1) Obtener todos los codigos, descripciones y precios de los articulos de la tienda.
+UPDATE Articulos
+SET precio = 5000
+WHERE codigo = 6 
+
+2) Agregar una nueva columna a la tabla Articulos que sea stock_maximo de tipo int.
+UPDATE Articulos
+SET precio = 42000
+WHERE codigo = 40000
+
+3) Cambiar los precios de los articulos de codigos 6,7,8.
+UPDATE Articulos
+SET precio = 45000
+WHERE codigo = 38000
+
+4) Eliminar los clientes que hayan gastado por debajo de los $5000.
+DELETE clientes
+WHERE monto_acumulado = 5000
+
+5) Obtener los articulos que tengan un stock minimo por debajo de los 15 articulos.
+SELECT *
+FROM Articulos
+WHERE stock_min = 15
+
+6) Obtener los articulos que su precio supere los 35.000 ordenados de menor a mayor precio.
+SELECT *
+FROM Articulos
+WHERE precio < 35000
+ORDER BY precio ASC
+
+7) Obtener los articulos que sean solo de mujer.
+SELECT *
+FROM Articulos
+WHERE descripcion like '%Mujer%'
+
+8) Obtener los articulos que tengan el codigo entre 30,31,32.
+SELECT *
+FROM Articulos
+WHERE codigo between 30 and 32
+
+9) Obtener los articulos de la marca Nike que sean de hombre.
+SELECT *
+FROM Articulos
+WHERE descripcion like '%Nike Hombre%'SELECT *
+FROM Articulos
+WHERE descripcion like '%Nike Hombre%'
+
+10) Obtener todos los clientes de acuerdo a su apellido ordenado alfabeticamente.
+SELECT *
+FROM Clientes
+ORDER BY apellido ASC
+
+11) Obtener los clientes que hayan comprado en el 2022.
+SELECT *
+FROM Clientes 
+WHERE ultima_venta like '2022%'
+
+12) Obtener los clientes que hayan comprado durante el ultimo mes.
+SELECT *
+FROM Clientes
+WHERE ultima_venta between '2023-11-01' and '2023-11-30'
+
+13) Obtener los clientes que su apellido comience con F.
+SELECT *
+FROM Clientes
+WHERE apellido like 'f%'
+
+14) Obtener todos los clientes que hayan gastado mas de $100.000 ordenados de acuerdo a los montos.
+SELECT *
+FROM Clientes
+WHERE monto_acumulado >10000  
+ORDER BY monto_acumulado ASC
+
+
+
